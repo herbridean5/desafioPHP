@@ -85,17 +85,15 @@
 						
 					$cursos .="
 						<div class='col-md-4 img-portfolio'>
-							<a href=\"javascript:document.querySelector('form').submit();\">
-								<img class='img' width='350' height='300' src='$url' alt=''>
-							</a>
-							<h3>
-								<form method='POST' action='produto.php'>
-									<input type='hidden' name='postId' value='$idProduto'>
-									<a href=\"javascript:document.querySelector('form').submit();\">$nomeproduto - $fkTipo</a>
-								</form>
-							</h3>
+							<form method='POST' id='formp'action='produto.php'>
+								<input type='hidden' name='postId' value='$idProduto'>
+								<input type='image' width='350' height='300' src='$url' alt='Submit' />
+								<h3>
+									<a>$nomeproduto - $fkTipo</a>
+								</h3>
+							</form>
 							<p>$descriProduto</p>
-						</div>";
+					</div>";
 					if($count%3 == 0){
 						//criando nova linha para cada 3 produtos
 						$cursos .="
